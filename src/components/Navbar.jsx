@@ -54,16 +54,16 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
               return (
                 <a 
                   key={link.name} 
                   href={link.href}
-                  className={`font-medium transition-colors hover:text-brand-yellow ${
+                  className={`font-medium transition-all hover:text-brand-yellow ${
                     isActive 
-                      ? 'text-brand-yellow' 
+                      ? 'text-brand-yellow font-bold scale-105' 
                       : isScrolled ? 'text-slate-700' : 'text-white drop-shadow-sm'
                   }`}
                 >
@@ -74,7 +74,7 @@ export default function Navbar() {
           </div>
 
           {/* Actions: Lang + CTA */}
-          <div className="hidden md:flex items-center space-x-4 rtl:space-x-reverse">
+          <div className="hidden md:flex items-center gap-4">
             {/* Lang Switcher */}
             <div className="relative group">
               <button className={`flex items-center gap-1 font-medium ${isScrolled ? 'text-slate-700' : 'text-white'} hover:text-brand-yellow transition-colors`}>
@@ -120,7 +120,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Content */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0 top-full">
+        <div className="md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full inset-x-0 top-full">
           <div className="px-4 pt-2 pb-6 space-y-1">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;

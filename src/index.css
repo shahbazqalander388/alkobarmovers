@@ -8,21 +8,25 @@
   --color-brand-yellow-light: #facc15;
   --color-brand-yellow-dark: #ca8a04;
   
-  --font-sans: 'Inter', 'Tajawal', 'Noto Nastaliq Urdu', system-ui, sans-serif;
+  --font-sans: 'Inter', 'IBM Plex Sans Arabic', 'Tajawal', system-ui, sans-serif;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body {
     @apply text-slate-800 bg-slate-50 antialiased;
     font-family: var(--font-sans);
+    overflow-x: hidden;
   }
   
   /* RTL Support for specific layout adjustments if needed */
   [dir='rtl'] {
-    font-family: 'Tajawal', 'Noto Nastaliq Urdu', 'Inter', system-ui, sans-serif;
+    font-family: 'IBM Plex Sans Arabic', 'Tajawal', 'Inter', system-ui, sans-serif;
+    letter-spacing: normal !important;
+    line-height: 1.8;
   }
 }
 
