@@ -5,6 +5,7 @@ import { LanguageContext } from '../context/LanguageContext';
 export default function Navbar() {
   const { lang, setLang, t } = useContext(LanguageContext);
   const [isOpen, setIsOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -94,15 +95,20 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center gap-4">
-             <div className="relative group">
-              <button className={`flex items-center gap-1 ${isScrolled ? 'text-slate-700' : 'text-white'}`}>
+             <div className="relative">
+              <button 
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className={`flex items-center gap-1 ${isScrolled ? 'text-slate-700' : 'text-white'}`}
+              >
                 <Globe className="w-5 h-5" />
               </button>
-              <div className="absolute right-0 rtl:left-0 rtl:right-auto mt-2 w-32 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <button onClick={() => setLang('en')} className="block w-full text-left px-4 py-2 text-sm text-slate-700">English</button>
-                <button onClick={() => setLang('ar')} className="block w-full text-left rtl:text-right px-4 py-2 text-sm text-slate-700">العربية</button>
-                <button onClick={() => setLang('ur')} className="block w-full text-left rtl:text-right px-4 py-2 text-sm text-slate-700">اردو</button>
-              </div>
+              {isLangOpen && (
+                <div className="absolute right-0 rtl:left-0 rtl:right-auto mt-2 w-32 bg-white rounded-md shadow-lg transition-all duration-200 z-50">
+                  <button onClick={() => { setLang('en'); setIsLangOpen(false); }} className="block w-full text-left px-4 py-2 text-sm text-slate-700">English</button>
+                  <button onClick={() => { setLang('ar'); setIsLangOpen(false); }} className="block w-full text-left rtl:text-right px-4 py-2 text-sm text-slate-700">العربية</button>
+                  <button onClick={() => { setLang('ur'); setIsLangOpen(false); }} className="block w-full text-left rtl:text-right px-4 py-2 text-sm text-slate-700">اردو</button>
+                </div>
+              )}
             </div>
             
             <button onClick={() => setIsOpen(!isOpen)} className={`${isScrolled ? 'text-slate-800' : 'text-white'}`}>
