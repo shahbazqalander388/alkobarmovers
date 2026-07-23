@@ -1,0 +1,42 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: 'Ahmed Al-Rashid',
+    location: 'Al Khobar to Riyadh',
+    rating: 5,
+    text: 'Exceptional service from start to finish! The team was professional, punctual, and handled our belongings with great care. Our villa move was completed smoothly without any damage. Highly recommended!',
+    avatar: 'AR',
+  },
+  {
+    id: 2,
+    name: 'Sarah Mohammed',
+    location: 'Dammam to Jubail',
+    rating: 5,
+    text: 'I was amazed by how efficient and organized the moving team was. They packed everything perfectly and delivered on time. The best moving experience I have ever had in Saudi Arabia.',
+    avatar: 'SM',
+  },
+  {
+    id: 3,
+    name: 'Omar Hassan',
+    location: 'Al Khobar - Local Move',
+    rating: 5,
+    text: 'Moved our entire office over the weekend with zero downtime. The team handled all IT equipment and furniture professionally. Al Khobar Movers truly understands business needs.',
+    avatar: 'OH',
+  },
+  {
+    id: 4,
+    name: 'Fatima Al-Saud',
+    location: 'Riyadh to Dammam',
+    rating: 5,
+    text: 'From the first call to the final delivery, everything was handled with perfection. The packing quality was superb and nothing was damaged during the long-distance move. Thank you!',
+    avatar: 'FS',
+  },
+  {
+    id: 5,
+    name: 'Khalid Ibrahim',
+    location: 'Al Hofuf to Al Khobar',
+    rating: 5,
+    text: 'Very professional and affordable service. The team arrived on time and completed the move faster than expected. I will definitely use Al Khobar Movers again for any future moves.',
+    avatar: 'KI',
+  },
+];

@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #15803d;
+  --color-brand-green-light: #16a34a;
+  --color-brand-green-dark: #166534;
+  --color-brand-yellow: #eab308;
+  --color-brand-yellow-light: #facc15;
+  --color-brand-yellow-dark: #ca8a04;
+  
+  --font-sans: 'Inter', 'Tajawal', 'Noto Nastaliq Urdu', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-slate-800 bg-slate-50 antialiased;
+    font-family: var(--font-sans);
+  }
+  
+  /* RTL Support for specific layout adjustments if needed */
+  [dir='rtl'] {
+    font-family: 'Tajawal', 'Noto Nastaliq Urdu', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border-b border-white/20;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-green to-brand-green-light;
+  }
+}

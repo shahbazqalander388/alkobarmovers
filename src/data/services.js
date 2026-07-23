@@ -1,0 +1,81 @@
+import { Home, Building2, Castle, Briefcase, Sofa, PackageOpen, PackageCheck, Truck, ArrowDownToLine, MapPin, Route } from 'lucide-react';
+
+export const services = [
+  {
+    id: 'house-shifting',
+    icon: Home,
+    title: 'House Shifting',
+    description: 'Complete house relocation services with careful handling of all your belongings. We ensure a stress-free move from start to finish.',
+    features: ['Full house packing', 'Furniture disassembly & reassembly', 'Safe transportation', 'Unpacking at destination'],
+  },
+  {
+    id: 'apartment-moving',
+    icon: Building2,
+    title: 'Apartment Moving',
+    description: 'Specialized apartment moving services designed for high-rise and complex buildings. Expert handling of elevators and narrow spaces.',
+    features: ['Elevator coordination', 'Narrow space navigation', 'Floor protection', 'Efficient loading'],
+  },
+  {
+    id: 'villa-moving',
+    icon: Castle,
+    title: 'Villa Moving',
+    description: 'Premium villa relocation services for large properties. We handle luxury furniture, art, and delicate items with utmost care.',
+    features: ['Luxury item handling', 'Art & antique protection', 'Garden equipment moving', 'Custom crating'],
+  },
+  {
+    id: 'office-relocation',
+    icon: Briefcase,
+    title: 'Office Relocation',
+    description: 'Minimize downtime with our efficient office moving services. We handle IT equipment, furniture, and documents professionally.',
+    features: ['IT equipment handling', 'Document management', 'Weekend moves available', 'Minimal business disruption'],
+  },
+  {
+    id: 'furniture-moving',
+    icon: Sofa,
+    title: 'Furniture Moving',
+    description: 'Expert furniture moving with proper wrapping and protection. From single items to complete household furniture sets.',
+    features: ['Professional wrapping', 'Disassembly & reassembly', 'Scratch protection', 'Heavy item specialists'],
+  },
+  {
+    id: 'packing-services',
+    icon: PackageOpen,
+    title: 'Packing Services',
+    description: 'Professional packing using high-quality materials. We carefully pack fragile items, electronics, and valuables.',
+    features: ['Quality packing materials', 'Fragile item expertise', 'Systematic labeling', 'Custom box sizing'],
+  },
+  {
+    id: 'unpacking-services',
+    icon: PackageCheck,
+    title: 'Unpacking Services',
+    description: 'Let us handle the unpacking at your new location. We organize and arrange items as per your preferences.',
+    features: ['Organized arrangement', 'Debris removal', 'Item placement', 'Material recycling'],
+  },
+  {
+    id: 'loading-services',
+    icon: Truck,
+    title: 'Loading Services',
+    description: 'Professional loading with proper weight distribution and securing. Our trained team handles items of all sizes.',
+    features: ['Weight distribution', 'Secure strapping', 'Trained loaders', 'Equipment available'],
+  },
+  {
+    id: 'unloading-services',
+    icon: ArrowDownToLine,
+    title: 'Unloading Services',
+    description: 'Safe and efficient unloading at your destination. We carefully handle every item and place it where you need it.',
+    features: ['Careful handling', 'Room placement', 'Damage inspection', 'Inventory verification'],
+  },
+  {
+    id: 'local-moving',
+    icon: MapPin,
+    title: 'Local Moving',
+    description: 'Quick and affordable local moving services within your city. Same-day service available for urgent relocations.',
+    features: ['Same-day service', 'Affordable rates', 'Quick turnaround', 'City-wide coverage'],
+  },
+  {
+    id: 'long-distance-moving',
+    icon: Route,
+    title: 'Long Distance Moving',
+    description: 'Reliable long-distance moving across Saudi Arabia. GPS-tracked vehicles ensure your belongings are always monitored.',
+    features: ['GPS tracking', 'Insurance coverage', 'Multiple city routes', 'Scheduled delivery'],
+  },
+];

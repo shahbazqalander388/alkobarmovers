@@ -1,0 +1,16 @@
+{
+  "name": "Al Khobar Movers",
+  "short_name": "AK Movers",
+  "description": "Professional Moving & Shifting Services in Saudi Arabia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16a34a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
