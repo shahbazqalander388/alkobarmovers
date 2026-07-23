@@ -8,7 +8,6 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Gallery from './components/Gallery';
 import ServiceAreas from './components/ServiceAreas';
 import QuoteForm from './components/QuoteForm';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
@@ -64,7 +63,6 @@ function AppContent() {
           <Gallery />
           <ServiceAreas />
           <QuoteForm />
-          <Testimonials />
           <Contact />
         </main>
         <Footer />
