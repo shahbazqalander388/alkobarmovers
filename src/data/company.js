@@ -8,11 +8,11 @@ export const company = {
   whatsappClean: '966508155432',
   hours: '24/7 Always Available',
   address: 'Al Khobar, Eastern Province, Saudi Arabia',
-  mapUrl: 'https://maps.app.goo.gl/Sti668soWRAA6E6b6',
-  mapEmbed: 'https://maps.google.com/maps?q=26.2774242,50.2079656&z=15&output=embed',
+  mapUrl: 'https://maps.app.goo.gl/kEwrxwARimaxAhv76?g_st=aw',
+  mapEmbed: 'https://maps.google.com/maps?q=AlRahmaniya+Center,+King+Saud+St,+Al+Khobar+Al+Shamalia,+Al+Khobar+34429&t=&z=15&ie=UTF8&iwloc=&output=embed',
   coordinates: {
-    lat: 26.2774242,
-    lng: 50.2079656,
+    lat: 26.2974052,
+    lng: 50.207394,
   },
   baseUrl: 'https://alkhobarmovers.com',
   social: {

@@ -61,7 +61,7 @@ export default function Contact() {
           {/* Map */}
           <div className="lg:w-2/3 h-96 rounded-2xl overflow-hidden shadow-lg">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114406.88373302061!2d50.11728560111161!3d26.273180230230302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e830e2f9d6c7%3A0xc3fbc12da285fc51!2sAl%20Khobar%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1714418648375!5m2!1sen!2s" 
+              src="https://maps.google.com/maps?q=AlRahmaniya+Center,+King+Saud+St,+Al+Khobar+Al+Shamalia,+Al+Khobar+34429&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
