@@ -7,11 +7,11 @@ export default function Hero() {
   const { t, lang } = useContext(LanguageContext);
 
   return (
-    <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-green via-brand-green-dark to-brand-yellow">
+    <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-green via-brand-green-dark to-brand-yellow pt-24 sm:pt-28 lg:pt-32">
       {/* Overlay to ensure text readability */}
       <div className="absolute inset-0 bg-black/10 z-0"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-3xl">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
