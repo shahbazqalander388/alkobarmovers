@@ -1,74 +1,57 @@
-import React from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './context/LanguageContext';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import WhyChooseUs from './components/WhyChooseUs';
-import Gallery from './components/Gallery';
-import ServiceAreas from './components/ServiceAreas';
-import QuoteForm from './components/QuoteForm';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+
+// Layout Components
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
+import ScrollRestoration from './components/layout/ScrollRestoration';
+
+// Lazy loaded pages
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Gallery = lazy(() => import('./pages/Gallery'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsConditions = lazy(() => import('./pages/TermsConditions'));
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="w-10 h-10 border-4 border-green-600 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 function AppContent() {
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Al Khobar Movers",
-    "image": "https://res.cloudinary.com/dai2g47e4/image/upload/v1784807471/WhatsApp_Image_2026-07-23_at_1.53.57_AM_wdpzni.jpg",
-    "telephone": "+966 50 815 5432",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Al Khobar",
-      "addressCountry": "SA"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 26.2731802,
-      "longitude": 50.1172856
-    },
-    "url": "https://alkhobarmovers.com",
-    "priceRange": "$$",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    }
-  };
-
   return (
-    <>
-      <Helmet>
-        <title>Al Khobar Movers | Best House Shifting Company in Saudi Arabia</title>
-        <meta name="description" content="Professional movers in Al Khobar offering house shifting, office relocation, packing & unpacking services across Saudi Arabia. 24/7 service. Call +966 50 815 5432" />
-        <meta name="keywords" content="Al Khobar Movers, house shifting Saudi Arabia, office relocation Al Khobar, best movers Dammam, packing unpacking services Riyadh, moving company Jubail" />
-        <meta property="og:title" content="Al Khobar Movers | Best House Shifting Company in Saudi Arabia" />
-        <meta property="og:description" content="Professional movers in Al Khobar offering house shifting, office relocation, packing & unpacking services across Saudi Arabia. 24/7 service." />
-        <meta property="og:image" content="https://res.cloudinary.com/dai2g47e4/image/upload/v1784807471/WhatsApp_Image_2026-07-23_at_1.53.57_AM_wdpzni.jpg" />
-        <meta property="og:type" content="website" />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </script>
-      </Helmet>
-      
-      <div className="font-sans antialiased">
+    <Router>
+      <ScrollRestoration />
+      <div className="font-sans antialiased flex flex-col min-h-screen">
         <Navbar />
-        <main>
-          <Hero />
-          <Services />
-          <WhyChooseUs />
-          <Gallery />
-          <ServiceAreas />
-          <QuoteForm />
-          <Contact />
+        <main className="flex-grow">
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-conditions" element={<TermsConditions />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
         <WhatsAppFloatingButton />
       </div>
-    </>
+    </Router>
   );
 }
 

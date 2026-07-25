@@ -11,6 +11,7 @@ const NotFound = () => {
         title="404 - Page Not Found"
         description="The page you are looking for does not exist or has been moved. Return to Al Khobar Movers home page."
         canonical="/404"
+        noindex={true}
       />
       <div className="min-h-screen pt-32 pb-20 flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 relative overflow-hidden">
         {/* Background ambient lighting */}

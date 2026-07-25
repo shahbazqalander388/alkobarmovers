@@ -92,3 +92,64 @@ export const OrganizationJsonLd = () => {
     </Helmet>
   );
 };
+
+export const FAQPageJsonLd = ({ faqs }) => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+};
+
+export const ServiceJsonLd = ({ serviceName, description, url }) => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: serviceName,
+    description: description,
+    provider: {
+      '@type': 'MovingCompany',
+      name: 'Al Khobar Movers',
+    },
+    url: url || 'https://alkhobarmovers.com',
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+};
+
+export const WebPageJsonLd = ({ title, description, url, type = 'WebPage' }) => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    name: title,
+    description: description,
+    url: url,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Al Khobar Movers',
+    },
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+};

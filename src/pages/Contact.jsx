@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle } from 'lu
 import Container from '../components/ui/Container';
 import SectionHeading from '../components/ui/SectionHeading';
 import SEOHead from '../components/seo/SEOHead';
-import { BreadcrumbJsonLd } from '../components/seo/JsonLd';
+import { BreadcrumbJsonLd, WebPageJsonLd } from '../components/seo/JsonLd';
 import { company } from '../data/company';
 import { services } from '../data/services';
 
@@ -89,6 +89,7 @@ const Contact = () => {
         canonical="/contact"
       />
       <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }]} />
+      <WebPageJsonLd type="ContactPage" title="Contact Us | Al Khobar Movers" description="Contact Al Khobar Movers for a free moving quote. Call +966 50 815 5432 or WhatsApp us." url="https://alkhobarmovers.com/contact" />
 
       {/* Hero */}
       <section className="pt-32 sm:pt-36 md:pt-40 lg:pt-44 pb-16 md:pb-20 bg-gradient-to-br from-blue-900 via-blue-950 to-slate-900 relative overflow-hidden">

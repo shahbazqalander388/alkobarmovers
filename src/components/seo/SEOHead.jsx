@@ -7,6 +7,7 @@ const SEOHead = ({
   canonical,
   ogImage,
   ogType = 'website',
+  noindex = false,
   children,
 }) => {
   const baseUrl = 'https://alkhobarmovers.com';
@@ -25,6 +26,11 @@ const SEOHead = ({
       <meta name="description" content={description || defaultDescription} />
       <meta name="keywords" content={keywords || defaultKeywords} />
       {canonical && <link rel="canonical" href={`${baseUrl}${canonical}`} />}
+      {noindex ? (
+        <meta name="robots" content="noindex, nofollow" />
+      ) : (
+        <meta name="robots" content="index, follow" />
+      )}
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />

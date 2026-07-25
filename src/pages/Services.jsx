@@ -3,7 +3,7 @@ import { CheckCircle } from 'lucide-react';
 import Container from '../components/ui/Container';
 import SectionHeading from '../components/ui/SectionHeading';
 import SEOHead from '../components/seo/SEOHead';
-import { BreadcrumbJsonLd } from '../components/seo/JsonLd';
+import { BreadcrumbJsonLd, WebPageJsonLd } from '../components/seo/JsonLd';
 import { services } from '../data/services';
 import ContactCTA from '../components/home/ContactCTA';
 
@@ -17,6 +17,7 @@ const Services = () => {
         canonical="/services"
       />
       <BreadcrumbJsonLd items={[{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }]} />
+      <WebPageJsonLd title="Our Services | Al Khobar Movers" description="Explore our comprehensive moving services: house shifting, apartment moving, villa moving, office relocation, and more." url="https://alkhobarmovers.com/services" />
 
       {/* Hero */}
       <section className="pt-32 sm:pt-36 md:pt-40 lg:pt-44 pb-16 md:pb-20 bg-gradient-to-br from-blue-900 via-blue-950 to-slate-900 relative overflow-hidden">
