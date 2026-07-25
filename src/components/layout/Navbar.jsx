@@ -77,14 +77,28 @@ const Navbar = () => {
 
   // Handle navigation click
   const handleNavClick = (e, item) => {
+    const wasOpen = isOpen;
     setIsOpen(false);
     
-    // If we're already on the home page, just scroll to the section
+    if (wasOpen) {
+      document.body.style.overflow = '';
+    }
+    
+    // If we're already on the home page, scroll to the section
     if (location.pathname === '/') {
-      const el = document.getElementById(item.id);
-      if (el) {
-        // html { scroll-behavior: smooth } handles the animation
-        el.scrollIntoView({ behavior: 'smooth' });
+      const scroll = () => {
+        const el = document.getElementById(item.id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          setActiveSection(item.id);
+        }
+      };
+
+      if (wasOpen) {
+        // Wait for mobile menu closing animation to finish so viewport height is correct
+        setTimeout(scroll, 300);
+      } else {
+        scroll();
       }
     }
   };
