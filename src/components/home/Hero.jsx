@@ -10,6 +10,13 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src="https://res.cloudinary.com/dai2g47e4/image/upload/f_auto,q_auto,w_1920/v1784807472/WhatsApp_Image_2026-07-23_at_1.53.58_AM_duc6cj.jpg"
+          srcSet="
+            https://res.cloudinary.com/dai2g47e4/image/upload/f_auto,q_auto,w_600/v1784807472/WhatsApp_Image_2026-07-23_at_1.53.58_AM_duc6cj.jpg 600w,
+            https://res.cloudinary.com/dai2g47e4/image/upload/f_auto,q_auto,w_1200/v1784807472/WhatsApp_Image_2026-07-23_at_1.53.58_AM_duc6cj.jpg 1200w,
+            https://res.cloudinary.com/dai2g47e4/image/upload/f_auto,q_auto,w_1920/v1784807472/WhatsApp_Image_2026-07-23_at_1.53.58_AM_duc6cj.jpg 1920w
+          "
+          sizes="100vw"
+          fetchpriority="high"
           alt="Professional moving services by Al Khobar Movers"
           className="w-full h-full object-cover"
         />

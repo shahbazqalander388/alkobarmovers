@@ -7,7 +7,7 @@ export default function WhyChooseUs() {
   const { t } = useContext(LanguageContext);
   
   // Choose one of the provided images for the background
-  const bgImage = "https://res.cloudinary.com/dai2g47e4/image/upload/v1784807470/WhatsApp_Image_2026-07-23_at_1.53.55_AM_mzztey.jpg";
+  const bgImage = "https://res.cloudinary.com/dai2g47e4/image/upload/f_auto,q_auto/v1784807470/WhatsApp_Image_2026-07-23_at_1.53.55_AM_mzztey.jpg";
 
   const reasons = [
     { icon: Clock, titleKey: 'why1', descKey: 'why1Desc' },
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-900/50">
               <img 
-                src="https://res.cloudinary.com/dai2g47e4/image/upload/v1784807472/WhatsApp_Image_2026-07-23_at_1.53.58_AM_duc6cj.jpg" 
+                src="https://res.cloudinary.com/dai2g47e4/image/upload/f_auto,q_auto/v1784807472/WhatsApp_Image_2026-07-23_at_1.53.58_AM_duc6cj.jpg" 
                 alt="Professional Movers" 
                 className="w-full h-[500px] object-cover"
               />

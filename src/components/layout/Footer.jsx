@@ -58,7 +58,7 @@ const Footer = () => {
                   <span className="text-xl font-bold text-yellow-400"> Movers</span>
                 </div>
               </div>
-              <p className="text-slate-400 mb-6 leading-relaxed text-sm">
+              <p className="text-slate-300 mb-6 leading-relaxed text-sm">
                 Your trusted partner for professional moving and shifting services across Saudi
                 Arabia. Available 24/7 for house, villa, apartment, and office relocations.
               </p>
@@ -67,21 +67,21 @@ const Footer = () => {
                   href={company.social.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-xl bg-slate-800 hover:bg-green-600 text-slate-300 hover:text-white transition-all duration-300 hover:scale-110"
+                  className="p-3.5 rounded-xl bg-slate-800 hover:bg-green-600 text-slate-300 hover:text-white transition-all duration-300 hover:scale-110"
                   aria-label="WhatsApp"
                 >
                   <MessageCircle className="w-5 h-5" />
                 </a>
                 <a
                   href={`tel:${company.phoneClean}`}
-                  className="p-2.5 rounded-xl bg-slate-800 hover:bg-green-600 text-slate-300 hover:text-white transition-all duration-300 hover:scale-110"
+                  className="p-3.5 rounded-xl bg-slate-800 hover:bg-green-600 text-slate-300 hover:text-white transition-all duration-300 hover:scale-110"
                   aria-label="Call us"
                 >
                   <Phone className="w-5 h-5" />
                 </a>
                 <a
                   href={`mailto:${company.email}`}
-                  className="p-2.5 rounded-xl bg-slate-800 hover:bg-yellow-500 text-slate-300 hover:text-slate-900 transition-all duration-300 hover:scale-110"
+                  className="p-3.5 rounded-xl bg-slate-800 hover:bg-yellow-500 text-slate-300 hover:text-slate-900 transition-all duration-300 hover:scale-110"
                   aria-label="Email us"
                 >
                   <Mail className="w-5 h-5" />
@@ -91,14 +91,14 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-6 border-l-4 border-yellow-400 pl-3">Quick Links</h3>
+              <h2 className="text-lg font-bold text-white mb-6 border-l-4 border-yellow-400 pl-3">Quick Links</h2>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.path + link.label}>
                     <Link
                       to={link.path}
                       onClick={(e) => handleFooterNavClick(e, link)}
-                      className="flex items-center gap-2 text-slate-400 hover:text-yellow-400 transition-colors group text-sm font-medium"
+                      className="flex items-center gap-2 text-slate-300 hover:text-yellow-400 transition-colors group text-sm font-medium p-1"
                     >
                       <ChevronRight className="w-4 h-4 text-green-500 group-hover:translate-x-1 transition-transform" />
                       {link.label}
@@ -110,13 +110,13 @@ const Footer = () => {
 
             {/* Services */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-6 border-l-4 border-yellow-400 pl-3">Our Services</h3>
+              <h2 className="text-lg font-bold text-white mb-6 border-l-4 border-yellow-400 pl-3">Our Services</h2>
               <ul className="space-y-3">
                 {serviceLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       to={link.path}
-                      className="flex items-center gap-2 text-slate-400 hover:text-yellow-400 transition-colors group text-sm font-medium"
+                      className="flex items-center gap-2 text-slate-300 hover:text-yellow-400 transition-colors group text-sm font-medium p-1"
                     >
                       <ChevronRight className="w-4 h-4 text-green-500 group-hover:translate-x-1 transition-transform" />
                       {link.label}
@@ -128,25 +128,25 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-6 border-l-4 border-yellow-400 pl-3">Contact Info</h3>
+              <h2 className="text-lg font-bold text-white mb-6 border-l-4 border-yellow-400 pl-3">Contact Info</h2>
               <ul className="space-y-4 text-sm">
                 <li>
-                  <a href={`tel:${company.phoneClean}`} className="flex items-start gap-3 text-slate-400 hover:text-yellow-400 transition-colors">
+                  <a href={`tel:${company.phoneClean}`} className="flex items-start gap-3 text-slate-300 hover:text-yellow-400 transition-colors p-1">
                     <Phone className="w-5 h-5 mt-0.5 text-green-500 shrink-0" />
                     <span>{company.phone}</span>
                   </a>
                 </li>
                 <li>
-                  <a href={`mailto:${company.email}`} className="flex items-start gap-3 text-slate-400 hover:text-yellow-400 transition-colors">
+                  <a href={`mailto:${company.email}`} className="flex items-start gap-3 text-slate-300 hover:text-yellow-400 transition-colors p-1">
                     <Mail className="w-5 h-5 mt-0.5 text-green-500 shrink-0" />
                     <span>{company.email}</span>
                   </a>
                 </li>
-                <li className="flex items-start gap-3 text-slate-400">
+                <li className="flex items-start gap-3 text-slate-300 p-1">
                   <MapPin className="w-5 h-5 mt-0.5 text-green-500 shrink-0" />
                   <span>{company.address}</span>
                 </li>
-                <li className="flex items-start gap-3 text-slate-400">
+                <li className="flex items-start gap-3 text-slate-300 p-1">
                   <Clock className="w-5 h-5 mt-0.5 text-yellow-400 shrink-0" />
                   <span className="font-semibold text-white">Open 24/7 — Always Available</span>
                 </li>
